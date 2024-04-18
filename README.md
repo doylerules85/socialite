@@ -2,4 +2,4 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-Visit this website [here](https://socialite-cs.netlify.app/posts)
+Visit this website [here](https://socialite-cs.netlify.app/)
