@@ -23,7 +23,7 @@ const ProfilePage = async () => {
       </h1>
       <div className="flex flex-col items-center justify-center">
         <img
-          className="w-32 lg:w-48 rounded-full border-4 border-indigo-500"
+          className="w-32 h-32 lg:w-48 lg:h-48 rounded-full border-4 border-indigo-500"
           src={`https://i.pravatar.cc/150?u=${user.id}`}
           alt={user.name}
         />
@@ -38,7 +38,10 @@ const ProfilePage = async () => {
         <ul className="divide-y">
           {posts.map((post) => (
             <li className="py-2">
-              <Link href={`/posts/${post.id}`} className="text-lg">
+              <Link
+                href={`/posts/${post.id}`}
+                className="text-lg focus:outline-indigo-600 hover:underline hover:decoration-indigo-500"
+              >
                 {post.title}
               </Link>
             </li>

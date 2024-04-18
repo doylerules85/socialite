@@ -1,7 +1,7 @@
+import { PostType } from "@/app/types";
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Suspense } from "react";
 
 const PostPage = async ({ params }: { params: Params }) => {
   const getPost = async () => {
@@ -11,7 +11,7 @@ const PostPage = async ({ params }: { params: Params }) => {
     const data = await response.json();
     return data;
   };
-  const post = await getPost();
+  const post: PostType = await getPost();
 
   if (!post.id) {
     return notFound();
@@ -22,7 +22,7 @@ const PostPage = async ({ params }: { params: Params }) => {
       <div className="mb-10">
         <Link
           href="/posts"
-          className="underline decoration-2 decoration-indigo-500 underline-offset-2 hover:no-underline"
+          className="underline decoration-2 decoration-indigo-500 underline-offset-2 hover:no-underline focus:outline-indigo-600"
         >
           Back to Posts
         </Link>

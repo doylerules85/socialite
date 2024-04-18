@@ -18,9 +18,17 @@ const PostList = async () => {
             src={`https://i.pravatar.cc/150?u=${post.userId}`}
             alt="profile picture"
           />
-          <Link className="text-lg" href={`posts/${post.id}`}>
-            {post.title}
-          </Link>
+          <div className="flex flex-col">
+            <h2 className="text-lg">
+              <Link
+                className="focus:outline-indigo-600"
+                href={`posts/${post.id}`}
+              >
+                {post.title}
+              </Link>
+            </h2>
+            <span className="text-xs">Published: 4/18/2024</span>
+          </div>
         </li>
       ))}
     </ul>

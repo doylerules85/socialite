@@ -1,6 +1,7 @@
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import Link from "next/link";
 import { PostType, UserType } from "../../types";
+import { notFound } from "next/navigation";
 const ProfilePage = async ({ params }: { params: Params }) => {
   const getUser = async () => {
     const response = await fetch(
@@ -18,6 +19,9 @@ const ProfilePage = async ({ params }: { params: Params }) => {
   };
   const user: UserType = await getUser();
   const posts: PostType[] = await getPosts();
+  if (!user.id) {
+    return notFound();
+  }
   return (
     <section className="container mx-auto px-4 py-10">
       <h1 className="text-4xl lg:text-6xl mb-10 font-bold text-center">
