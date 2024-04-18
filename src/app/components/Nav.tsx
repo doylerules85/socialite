@@ -21,7 +21,7 @@ const Nav = () => {
         <Link
           aria-label="Go To Home"
           href="/"
-          className="bg-indigo-500 p-2 rounded-lg text-white font-bold"
+          className="bg-indigo-500 p-2 rounded-lg text-white font-bold focus:outline-indigo-600 focus:outline-offset-2"
         >
           Socialite
         </Link>
@@ -29,7 +29,7 @@ const Nav = () => {
           {links.map((link) => (
             <Link
               key={link.title}
-              className="font-bold hover:text-indigo-600 hover:underline capitalize"
+              className="font-bold hover:text-indigo-600 hover:underline capitalize focus:outline-indigo-600"
               href={link.href}
             >
               {link.title}

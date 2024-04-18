@@ -18,7 +18,7 @@ const FriendList = async () => {
         <li key={friend.id}>
           <Link
             href={`/user/${friend.id}`}
-            className="flex flex-col items-center gap-4"
+            className="flex flex-col items-center gap-4 focus:outline-indigo-600"
           >
             <img
               className="w-20 lg:w-32 rounded-full"
