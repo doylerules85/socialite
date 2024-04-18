@@ -43,7 +43,7 @@ const ProfilePage = async ({ params }: { params: Params }) => {
         <h2 className="text-4xl mb-5">Recent Posts</h2>
         <ul className="divide-y">
           {posts.map((post) => (
-            <li className="py-2">
+            <li key={post.id} className="py-2">
               <Link href={`/posts/${post.id}`} className="text-lg">
                 {post.title}
               </Link>
