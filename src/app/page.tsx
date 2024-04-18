@@ -1,7 +1,9 @@
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      welcome to socialite
-    </main>
+    <section className="h-full">
+      <div className="flex justify-center items-center py-20">
+        <h1 className="text-5xl font-bold capitalize">welcome to socialite</h1>
+      </div>
+    </section>
   );
 }

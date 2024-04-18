@@ -16,8 +16,8 @@ const Nav = () => {
     },
   ];
   return (
-    <header className=" bg-slate-100 p-4">
-      <div className="container mx-auto flex items-center justify-between">
+    <header className=" bg-slate-100">
+      <div className="container mx-auto flex items-center justify-between p-4">
         <Link
           aria-label="Go To Home"
           href="/"
